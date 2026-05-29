@@ -1,3 +1,10 @@
+<?php
+  include("Services/function.php");
+
+
+
+?>
+
 <!doctype html>
 <html lang="id">
   <head>
@@ -5,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Admin Pengiriman Barang</title>
     <link href="Bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -166,6 +173,6 @@
     </div>
 
     <script src="Chart.js-4.5.1/package/dist/chart.js"></script>
-    <script src="script.js"></script>
+    <script src="JavaScript/script.js"></script>
   </body>
 </html>

@@ -1,10 +1,16 @@
+<?php
+require "Services/loginRegis.php";
+
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login</title>
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="Css/login.css" />
   </head>
 
   <body>
@@ -13,6 +19,12 @@
         <div class="title login">Login</div>
         <div class="title signup">Registrasi</div>
       </div>
+
+      <?php if (isset($error)): ?>
+          <div class="error-message">
+            <p style="color:red; font-style:italic;">Email atau password salah!</p>
+          </div>
+        <?php endif; ?>
 
       <div class="form-container">
         <div class="slide-controls">
@@ -26,13 +38,13 @@
         </div>
 
         <div class="form-inner">
-          <form action="#" class="login">
+          <form action="" method="POST" class="login">
             <div class="field">
-              <input type="email" placeholder="Masukkan Email" required />
+              <input type="email" name="email" placeholder="Masukkan Email" required />
             </div>
 
             <div class="field">
-              <input type="password" placeholder="Masukkan Password" required />
+              <input type="password" name="pass" placeholder="Masukkan Password" required />
             </div>
 
             <div class="pass-link">
@@ -41,32 +53,32 @@
 
             <div class="field btn">
               <div class="btn-layer"></div>
-              <input type="submit" value="Login" />
+              <input type="submit" value="Login" name="Login" />
             </div>
 
             <div class="signup-link">Belum punya akun? <a href="#">Daftar Sekarang</a></div>
           </form>
 
-          <form action="#" class="signup">
+          <form action="" method="POST" class="signup">
             <div class="field">
-              <input type="text" placeholder="Masukkan Nama Lengkap" required />
+              <input type="text" name="nama" placeholder="Masukkan Nama Lengkap" required />
             </div>
 
             <div class="field">
-              <input type="email" placeholder="Masukkan Email" required />
+              <input type="email" name="email" placeholder="Masukkan Email" required />
             </div>
 
             <div class="field">
-              <input type="password" placeholder="Masukkan Password" required />
+              <input type="password" name="pass" placeholder="Masukkan Password" required />
             </div>
 
             <div class="field">
-              <input type="password" placeholder="Verifikasi Password" required />
+              <input type="password" name="confirm_pass" placeholder="Verifikasi Password" required />
             </div>
 
             <div class="field btn">
               <div class="btn-layer"></div>
-              <input type="submit" value="Registrasi" />
+              <input type="submit" value="Registrasi" name="regis" />
             </div>
 
             <div class="signup-link">Saya sudah punya akun? <a href="#">Masuk Sekarang</a></div>
@@ -75,6 +87,8 @@
       </div>
     </div>
 
-    <script src="js_login.js"></script>
+    <script src="JavaScript/js_login.js"></script>
   </body>
 </html>
+
+
